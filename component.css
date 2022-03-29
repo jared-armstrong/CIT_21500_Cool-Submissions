@@ -1,0 +1,21 @@
+.validate {
+    color: blue;
+}
+
+.codeName {
+    color:red;
+}
+
+.side1 {
+    background-color: aquamarine;
+    color: red;
+}
+
+.side2 {
+    background-color: black;
+    color: aqua;
+}
+
+.hide{
+    display:none;
+}

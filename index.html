@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cool Submissions and Components</title>
+    <link rel ="stylesheet" href="component.css"/>
+</head>
+<body>
+
+<div id="app">
+    <p>
+        <input type="text" v-model="name" placeholder = "Name">
+    <p class="validate">{{validateName}}</p>
+    </p>
+
+    <p>
+            <input type="text" v-model="email" placeholder = "Email">
+    <p class="validate">{{validateEmail}}</p>
+    </p>
+
+    <p>
+        <input type="submit" value ="Submit" v-on:click="check">
+    <p>{{submit}}</p>
+    </p>
+
+    <div v-for = "item in list" v-on:click = "item.toggle = !item.toggle">
+        <div v-bind:class = "item.name">
+        </div>
+        <div class="side1" v-bind:class = {hide:item.toggle}>
+            <h1>{{item.name}}</h1>
+        </div>
+        <div class="side2" v-bind:class = {hide:!item.toggle}>
+            <p>{{item.codename}}</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src ="vue.js"></script>
+<script src ="app.js"></script>
+</body>
+</html>
